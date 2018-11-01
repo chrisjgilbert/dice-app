@@ -20,4 +20,9 @@ describe Dice do
     expect(dice.roll(3).size).to eq 3
   end
 
+  it 'each roll should be between 1 and 6' do
+    result = dice.roll(10)
+    result.each { |roll| expect(roll).to be_between(1, 6) }
+  end
+
 end
